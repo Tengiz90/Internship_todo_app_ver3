@@ -1,0 +1,53 @@
+form {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+    margin: 0 auto;
+    margin-top: 5em;
+    flex-direction: column;
+}
+
+app-custom-button{
+    width: 60%;
+    margin: 0 auto;
+}
+
+a {
+    margin-top: 1em;
+    text-align: center;
+    display: block;
+}
+
+@media (max-height: 800px) {
+    form {
+        gap: 3em;
+        margin-top: 3em;
+    }
+
+    app-custom-button {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (max-height: 640px) {
+    form {
+        gap: 1.8em;
+        margin-top: 2em;
+    }
+
+    app-custom-button {
+        font-size: 0.7em;
+    }
+
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 90%;
+    }
+    app-custom-button  {
+        width: 70%;
+    }
+}

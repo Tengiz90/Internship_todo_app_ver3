@@ -1,0 +1,11 @@
+.container {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: start; 
+    
+}
+
+app-custom-input {
+    width: 80%;
+}
+

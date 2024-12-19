@@ -1,0 +1,29 @@
+form {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+    margin: 0 auto;
+    margin-top: 5em;
+    flex-direction: column;
+}
+
+a {
+    margin-top: 1em;
+    text-align: center;
+    display: block;
+}
+
+app-custom-button{
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 90%;
+    }
+    app-custom-button  {
+        width: 70%;
+    }
+}

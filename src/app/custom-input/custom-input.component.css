@@ -1,0 +1,171 @@
+.form_group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+input {
+    font-size: 2em;
+    border-radius: 5px;
+    border: 1px solid #c6c6c6;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    height: 2em;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+input:focus {
+    outline-color: #007BFF;
+}
+
+.password {
+    padding-right: 2em;
+}
+
+label {
+    font-size: 2em;
+    color: #c6c6c6;
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
+    padding: 0 5px;
+    display: inline-block;  
+    transition: all .3s;
+    align-self: flex-start;
+}
+
+input:focus ~ label, input:valid ~ label  {
+    background: white;
+    bottom: 3.7em;
+    font-size: 1em;
+
+}
+
+input:focus ~ label {
+    color: #007BFF;
+}
+
+.togglePassword {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    right: 2%;
+    bottom: 1.15em;
+    cursor: pointer;
+}
+
+.togglePassword > .on {
+    stroke: #007BFF;
+} 
+
+.togglePassword > .off {
+    stroke: #c6c6c6;;
+} 
+
+
+@media (max-height: 800px) {
+    .ResposniveHeight > input {
+        font-size: 1.6em;
+        border-radius: 5px;
+        border: 1px solid #c6c6c6;
+        height: 1.9em;
+    }
+    .ResposniveHeight > label {
+        font-size: 1.5em; 
+        bottom: 0.5em;
+    }   
+    .ResposniveHeight > input:focus ~ label, .ResposniveHeight > input:valid ~ label  {
+        bottom: 3.05em;
+        font-size: 0.9em;
+    }
+    
+    .ResposniveHeight > .togglePassword {
+    width: 1.75em;
+    height: 1.75em;
+    bottom: 0.7em;
+    }
+}
+
+@media (max-height: 640px) {
+    .ResposniveHeight > input {
+        font-size: 1.5em;
+        border-radius: 5px;
+        border: 1px solid #c6c6c6;
+        padding-left: 0.5em;
+        height: 1.8em;
+    }
+    .ResposniveHeight > label {
+        font-size: 1.3em; 
+        bottom: 0.55em;
+    }
+    .ResposniveHeight >input:focus ~ label, .ResposniveHeight > input:valid ~ label  {
+        bottom: 3em;
+        font-size: 0.81em;
+    }
+    
+    .ResposniveHeight > .togglePassword {
+        bottom: 0.7em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .togglePassword{
+        right: 4%;
+    }
+}
+
+
+@media (max-width: 340px) { 
+    #repeat-password ~ label{
+        font-size: 1.3em;
+        bottom: 1.1em;
+   }
+   #repeat-password:focus ~ label, #repeat-password:valid ~ label {
+        bottom: 2.7em;
+   }
+    #repeat-password ~ label ~ .togglePassword {
+    bottom: 1.15em;
+   } 
+}
+
+@media (max-width: 340px) and (max-height: 800px) { 
+    .ResposniveHeight > #repeat-password ~ label{
+        font-size: 1.3em;
+        bottom: 0.7em;
+   }
+   .ResposniveHeight > #repeat-password:focus ~ label, .ResposniveHeight > #repeat-password:valid ~ label {
+        bottom: 2em;
+   }
+   .ResposniveHeight > #repeat-password ~ label ~ .togglePassword {
+    bottom: 0.7em;
+   } 
+}
+
+@media (max-width: 340px) and (max-height: 640px) { 
+    .ResposniveHeight > #repeat-password ~ label{
+        font-size: 1.3em; 
+        bottom: 0.55em;
+   }
+   .ResposniveHeight > #repeat-password:focus ~ label, .ResposniveHeight > #repeat-password:valid ~ label {
+        bottom: 1.8em;
+   }
+   .ResposniveHeight > #repeat-password ~ label ~ .togglePassword {
+        bottom: 0.6em;
+        width: 1.5em;
+        height: 1.5em;
+   } 
+}

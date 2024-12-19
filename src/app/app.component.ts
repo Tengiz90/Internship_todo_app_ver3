@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CustomButtonComponent } from "./custom-button/custom-button.component";
+import { CustomInputComponent } from "./custom-input/custom-input.component";
+import { RegisterComponent } from "./register/register.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CustomButtonComponent, CustomInputComponent, RegisterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

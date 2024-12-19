@@ -1,0 +1,9 @@
+<div class="form_group" [ngClass]="hasResponsiveHeight ? 'ResposniveHeight' : ''">
+    <input [type]="isPassword ? (passwordVisibilityActive ? 'text': 'password') : 'text'" [id]="id" [ngClass]="isPassword ? 'password' : ''" required>
+    <label [for]="id">{{label}}</label>
+    <svg *ngIf="isPassword" class="togglePassword" (pointerdown)="togglePasswordVisibility($event)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12" [ngClass]="passwordVisibilityActive ? 'on': 'off'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12" [ngClass]="passwordVisibilityActive ? 'on': 'off'"stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="3" [ngClass]="passwordVisibilityActive ? 'on': 'off'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>

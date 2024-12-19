@@ -1,0 +1,9 @@
+<form id="register-form">
+<app-custom-input [label] = "'First Name'" [id]="'first-name'" [hasResponsiveHeight]="true"></app-custom-input>
+<app-custom-input [label] = "'Last Name'" [id]="'last-name'" [hasResponsiveHeight]="true"></app-custom-input>
+<app-custom-input [label] = "'Email'" [id]="'Email'" [hasResponsiveHeight]="true"></app-custom-input>
+<app-custom-input [label] = "'Password'" [id]="'password'" [hasResponsiveHeight]="true" [isPassword]="true"></app-custom-input>
+<app-custom-input [label] = "'Repeat Password'" [id]="'repeat-password'" [hasResponsiveHeight]="true" [isPassword]="true"></app-custom-input>
+<app-custom-button [label] = "'Register'" [type]="'sumbit'"></app-custom-button>
+</form>
+<a [routerLink]="'/login'">Already registered? Login</a>
