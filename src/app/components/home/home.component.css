@@ -1,0 +1,25 @@
+.container {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    
+}
+
+app-custom-input {
+    width: 85%;
+}
+
+app-custom-button {
+    width: 10%;
+}
+
+
+@media (max-width: 750px) {
+    app-custom-input {
+        width: 75%;
+    }
+    app-custom-button {
+        width: 20%;
+    }
+    
+}

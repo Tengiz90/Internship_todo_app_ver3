@@ -44,6 +44,7 @@ label {
     display: inline-block;  
     transition: all .3s;
     align-self: flex-start;
+    user-select: none;
 }
 
 input:focus ~ label, input:valid ~ label  {
