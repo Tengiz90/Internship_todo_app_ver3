@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Todo } from '../models/todo.model';
-import { ITodosRepository } from '../../repositories/Interfaces/ITodosRepository';
+import { TODOS_REPOSITORY_TOKEN } from '../tokens/todos-repository.token';
+import { ITodosRepository } from '../repositories/Interfaces/ITodosRepository';
 
 @Injectable({
   providedIn: 'root'

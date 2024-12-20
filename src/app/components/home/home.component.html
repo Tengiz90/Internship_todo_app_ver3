@@ -3,4 +3,12 @@
     <app-custom-input [label]="'🔍 Search'" [id]="'search'"></app-custom-input>
     <app-custom-button [label]="'Add'"></app-custom-button>
 </div>
-<br>
+<app-todo-list></app-todo-list>
+<app-todo-summery></app-todo-summery>
+<button [routerLink]="'/login'" aria-label="Sign out"  id="sign-out">
+    <svg viewBox="0 0 24 24" tabindex="0" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21,5.78V18.22a1,1,0,0,1-.76,1l-4.1,1a.92.92,0,0,1-.14-.5V4.28a.92.92,0,0,1,.14-.5l4.1,1A1,1,0,0,1,21,5.78Z"></path>
+        <path d="M20.24,19.19l-6,1.5a1,1,0,0,1-1.24-1V4.28a1,1,0,0,1,1.24-1l6,1.5a1,1,0,0,1,.76,1V18.22A1,1,0,0,1,20.24,19.19ZM13,6H10A1,1,0,0,0,9,7V8m0,8v1a1,1,0,0,0,1,1h3"></path>
+        <path d="M6,15,3,12,6,9M3,12H9"></path>
+    </svg>
+</button>       

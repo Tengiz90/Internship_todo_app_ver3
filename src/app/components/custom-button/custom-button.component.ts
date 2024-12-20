@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CustomButtonComponent {
   @Input() label: string = '';
-  @Input() type: string = "button"
+  @Input() type: string = "button";
 }

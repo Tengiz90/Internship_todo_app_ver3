@@ -27,7 +27,7 @@ select:-webkit-autofill:focus {
 }
 
 input:focus {
-    outline-color: #007BFF;
+    outline-color: var(--primary-color);
 }
 
 .password {

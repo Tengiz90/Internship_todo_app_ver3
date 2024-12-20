@@ -3,7 +3,7 @@ button {
     height: 2em;
     align-self: center;
     font-size: 2em;
-    background-color: #007BFF;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 5px;
     border-width: 0em;

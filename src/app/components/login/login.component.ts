@@ -13,4 +13,5 @@ import { CustomButtonComponent } from '../custom-button/custom-button.component'
 })
 export class LoginComponent {
 
+  constructor(){}
 }
