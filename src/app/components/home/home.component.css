@@ -1,3 +1,9 @@
+h1 {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
 .container {
     display: flex; 
     justify-content: space-around; 
@@ -79,3 +85,4 @@ path:last-child {
         stroke: black;
     }
 }
+
