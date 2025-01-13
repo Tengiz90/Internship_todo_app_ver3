@@ -1,10 +1,39 @@
 svg {
-    width: 2em;
-    height: 2em;
+    display: none;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 path:nth-child(2)  {
    fill: var(--primary-color);
+}
+
+.smaller {
+    width: 1em;
+    height: 1em;
+    display: block;
+}
+
+.small {
+    width: 1.4em;
+    height: 1.4em;
+    display: block;
+}
+
+.medium {
+    width: 2em;
+    height: 2em;
+    display: block;
+}
+
+.large {
+    width: 3em;
+    height: 3em;
+    display: block;
+}
+
+.large {
+    width: 3.6em;
+    height: 3.6em;
+    display: block;
 }

@@ -11,5 +11,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes), 
     provideHttpClient(),
-    {provide: TODOS_REPOSITORY_TOKEN, useClass: TodosRepository },]
+    {provide: TODOS_REPOSITORY_TOKEN, useClass: TodosRepository },
+  ]
 };

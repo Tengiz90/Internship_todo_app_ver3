@@ -19,18 +19,30 @@ app-custom-button {
     width: 10%;
 }
 
-#sign-out {
-    position: absolute;
-    bottom: 1em;
+#sign-out, #copy {
+    position: fixed;
     right: 1em;
+    bottom: 1em;
     background: none;       
     border: 0em;
 }
 
+#sign-out {
+    
+}
+#copy {
+    right: 1em;
+    bottom: 1em;
+}
+#copy > svg {
+    width: 4m;
+    height: 4em;
+}
+
+
 #sign-out > svg {
     width: 5em;
     height: 5em;
-    outline: none;
 }
 
 #sign-out {
@@ -41,12 +53,12 @@ app-custom-button {
     transform: scale(1.2);
 }
 
-path:first-child {
+#sign-out > svg > path:first-child {
     fill: #b7b7b7;
     stroke-width: 2;
 }
 
-path:nth-child(2) {
+#sign-out > svg > path:nth-child(2) {
     fill: none;
     stroke: black; 
     stroke-linecap: round; 
@@ -54,12 +66,19 @@ path:nth-child(2) {
     stroke-width: 2;
 }
 
-path:last-child {
+#sign-out > svg > path:last-child {
     stroke: var(--primary-color);
     fill: none;
     stroke-linecap: round; 
     stroke-linejoin: round;
     stroke-width: 2;
+}
+
+app-custom-loading {
+    position: absolute;      
+    top: 50%;                
+    left: 50%;    
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 750px) {
@@ -74,15 +93,7 @@ path:last-child {
 
 @media (max-height: 230px) {
     #sign-out {
-        top: 1.3em;
-        bottom: auto;
+        display: none;
     }
-    #sign-out > svg {
-        width: 3em;
-        height: 3em;
-    }
-    path:last-child {
-        stroke: black;
-    }
-}
+   
 

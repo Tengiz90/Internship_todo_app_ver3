@@ -1,0 +1,47 @@
+.spinner {
+    border: 0px solid #f3f3f3;
+    border-top: 0px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+.smaller {
+    width: 1.2em;
+    height: 1.2em;
+    border-width: 3px;
+    display: block;
+}
+
+.small {
+    width: 2em;
+    height: 2em;
+    border-width: 4px;
+    display: block;
+}
+
+.medium {
+    width: 4em;
+    height: 4em;
+    border-width: 6px;
+    display: block;
+}
+
+.large {
+    width: 5em;
+    height: 5em;
+    border-width: 7px;
+    display: block;
+}
+
+.larger {
+    width: 6em;
+    height: 6em;
+    border-width: 8px;
+    display: block;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}  

@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Todo } from '../models/todo.model';
+import { Todo } from '../models/Todo.model';
 import { TODOS_REPOSITORY_TOKEN } from '../tokens/todos-repository.token';
 import { ITodosRepository } from '../repositories/Interfaces/ITodosRepository';
 

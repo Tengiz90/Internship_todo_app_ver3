@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-checkbox',
@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './custom-checkbox.component.css'
 })
 export class CustomCheckboxComponent {
+  @Input() size: string = 'small';
   checked: boolean = false;
 
   toggleCheckMark(){

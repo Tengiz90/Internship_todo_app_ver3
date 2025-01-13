@@ -1,0 +1,47 @@
+table {
+    width: 92%;
+    border-spacing: 1em 0.5em; /
+} 
+
+
+td.title {
+    width: 100%;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 10px; 
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.delete-button {
+    cursor: pointer;
+    width: 2.2em;
+    height: 2.2em;
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap : round;
+    stroke-linejoin : round;
+    margin-left: 0%;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.delete-button:hover path {
+    stroke: red;
+}
+
+@media (max-width: 750px) {
+    table {
+        width: 87%;
+        border-spacing: 0.5em 0.5em; /
+    } 
+}
+
+
+@media (max-width: 600px) {
+    table {
+        width: 84%;
+        border-spacing: 0.5em 0.5em; /
+    } 
+}
