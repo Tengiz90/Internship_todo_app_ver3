@@ -24,18 +24,24 @@ app-custom-button {
     right: 1em;
     bottom: 1em;
     background: none;       
-    border: 0em;
+    border: none;
 }
 
 #sign-out {
-    
-}
-#copy {
     right: 1em;
     bottom: 1em;
 }
+#copy {
+    right: 1em;
+    bottom: 7.5em;
+}
+
+#sign-out > svg, #copy > svg {
+    outline: none;
+}
+
 #copy > svg {
-    width: 4m;
+    width: 4em;
     height: 4em;
 }
 
@@ -45,10 +51,10 @@ app-custom-button {
     height: 5em;
 }
 
-#sign-out {
+#sign-out, #copy {
     transition: transform 0.1s ease;
 }
-#sign-out:hover {
+#sign-out:hover, #copy:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
@@ -73,6 +79,15 @@ app-custom-button {
     stroke-linejoin: round;
     stroke-width: 2;
 }
+app-todo-list {
+    margin-bottom: 7em;
+} 
+app-todo-summery {
+    position: fixed;
+    width: 90.5%;
+    bottom: 0.2em;
+    left: 0.51em;
+}
 
 app-custom-loading {
     position: absolute;      
@@ -81,19 +96,68 @@ app-custom-loading {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
     app-custom-input {
         width: 75%;
     }
     app-custom-button {
         width: 20%;
+    } 
+    app-todo-summery {
+        width: 86%;
+    }
+}
+@media (max-width: 880px) {
+    app-todo-summery {
+        width: 82%;
+    }
+}
+@media (max-width: 700px) {
+    #copy > svg {
+        width: 3em;
+        height: 3em;
     }
     
+    #sign-out > svg {
+        width: 4em;
+        height: 4em;
+    }
+
+    #sign-out, #copy {
+        right: 0.2em;
+    }
+    app-todo-summery {
+        width: 79.5%;
+    }
+}
+@media (max-width: 420px) {
+app-todo-summery {
+    width: 77%;
+    }
 }
 
-@media (max-height: 230px) {
-    #sign-out {
+@media (max-width: 360px) {
+    #copy > svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
+    
+    #sign-out > svg {
+        width: 3.5em;
+        height: 3.5em;
+    }
+}
+
+
+@media (max-height: 720px) {
+    #copy {
+        bottom: 6.5em;
+    }
+}
+
+@media (max-height: 300px) {
+    #sign-out, #copy, app-todo-summery {
         display: none;
     }
-   
+}
 

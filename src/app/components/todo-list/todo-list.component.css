@@ -1,3 +1,6 @@
+.table-container {
+    margin-bottom: 6.6em;
+}
 table {
     width: 92%;
     border-spacing: 1em 0.5em; /
@@ -31,17 +34,32 @@ td.title {
     stroke: red;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
     table {
         width: 87%;
         border-spacing: 0.5em 0.5em; /
     } 
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 880px) {
     table {
         width: 84%;
         border-spacing: 0.5em 0.5em; /
     } 
+}
+
+@media (max-width: 700px) {
+    table {
+        width: 83%;
+        border-spacing: 0.5em 0.5em; /
+    } 
+}
+
+@media (max-height: 300px) {
+    table {
+        width: 100%;
+    }
+    .table-container {
+        margin-bottom: 0em;
+    }
 }

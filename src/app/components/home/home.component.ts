@@ -20,4 +20,7 @@ export class HomeComponent {
   firstName: string = "";
   isDataLoading: boolean = true;
   constructor(private todoService: TodoService){}
+  public copyTodos(): void{
+
+  }
 }
