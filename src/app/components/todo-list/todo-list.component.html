@@ -1,9 +1,9 @@
-<div class="table-container">
+<div class="table-container" >
 <table *ngIf="true">
     <thead>
     </thead>
     <tbody>
-        <tr *ngFor="let todo of todos">
+        <tr *ngFor="let todo of todos" >
             <td class ="title">{{todo.name}}</td>
             <td>
                 <app-custom-checkbox [size]="'medium'">></app-custom-checkbox>

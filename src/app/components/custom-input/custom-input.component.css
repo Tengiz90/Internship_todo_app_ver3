@@ -45,10 +45,11 @@ label {
     transition: all .3s;
     align-self: flex-start;
     user-select: none;
+    -webkit-user-select: none;
     cursor: text;
 }
 
-input:focus ~ label, input:valid ~ label  {
+input:focus ~ label, input:not(:empty) ~ label  {
     background: white;
     bottom: 3.7em;
     font-size: 1em;
@@ -56,8 +57,27 @@ input:focus ~ label, input:valid ~ label  {
 
 }
 
+.clear{
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    right: 2%;
+    bottom: 1em;
+    cursor: pointer;
+    display: none;
+}
+.clear > path {
+    fill: #c6c6c6;;
+}
+.clear:active > path{
+    fill: var(--primary-color);
+}
+input:valid ~ .clear {
+    display: block;
+}
+
 input:focus ~ label {
-    color: #007BFF;
+    color: var(--primary-color);
 }
 
 .togglePassword {
@@ -68,6 +88,7 @@ input:focus ~ label {
     bottom: 1.15em;
     cursor: pointer;
 }
+
 
 .togglePassword > .on {
     stroke: #007BFF;
@@ -89,7 +110,7 @@ input:focus ~ label {
         font-size: 1.5em; 
         bottom: 0.5em;
     }   
-    .ResposniveHeight > input:focus ~ label, .ResposniveHeight > input:valid ~ label  {
+    .ResposniveHeight > input:focus ~ label, .ResposniveHeight > input:not(:empty) ~ label  {
         bottom: 3.05em;
         font-size: 0.9em;
     }
@@ -113,7 +134,7 @@ input:focus ~ label {
         font-size: 1.3em; 
         bottom: 0.55em;
     }
-    .ResposniveHeight >input:focus ~ label, .ResposniveHeight > input:valid ~ label  {
+    .ResposniveHeight >input:focus ~ label, .ResposniveHeight > input:not(:empty) ~ label  {
         bottom: 3em;
         font-size: 0.81em;
     }
@@ -137,7 +158,7 @@ input:focus ~ label {
         font-size: 1.3em;
         bottom: 1.1em;
    }
-   #repeat-password:focus ~ label, #repeat-password:valid ~ label {
+   #repeat-password:focus ~ label, #repeat-password:not(:empty) ~ label {
         bottom: 2.7em;
    }
     #repeat-password ~ label ~ .togglePassword {
@@ -150,7 +171,7 @@ input:focus ~ label {
         font-size: 1.3em;
         bottom: 0.7em;
    }
-   .ResposniveHeight > #repeat-password:focus ~ label, .ResposniveHeight > #repeat-password:valid ~ label {
+   .ResposniveHeight > #repeat-password:focus ~ label, .ResposniveHeight > #repeat-password:not(:empty) ~ label {
         bottom: 2em;
    }
    .ResposniveHeight > #repeat-password ~ label ~ .togglePassword {
@@ -163,7 +184,7 @@ input:focus ~ label {
         font-size: 1.3em; 
         bottom: 0.55em;
    }
-   .ResposniveHeight > #repeat-password:focus ~ label, .ResposniveHeight > #repeat-password:valid ~ label {
+   .ResposniveHeight > #repeat-password:focus ~ label, .ResposniveHeight > #repeat-password:not(:empty) ~ label {
         bottom: 1.8em;
    }
    .ResposniveHeight > #repeat-password ~ label ~ .togglePassword {

@@ -1,4 +1,3 @@
-
 p {
     margin-top: 0.5em;
     margin-left: 0.5em;
@@ -13,11 +12,14 @@ svg {
 
 svg {
     transition: transform 0.1s ease;
+    pointer-events: all;
 }
 svg:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
+
+
 .wrapper {
     display: block;
     height: 6.5em;
@@ -25,9 +27,9 @@ svg:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: box-shadow 0.3s ease-in-out, height 0.3s ease-in-out;
-    overflow: hidden; 
-    pointer-events: none;
+    transition: box-shadow 0.3s ease-in-out, height 0.3s ease-in-out, background 0.8s ease-in-out;
+    overflow: hidden;
+
 }
 
 .flipped > path {

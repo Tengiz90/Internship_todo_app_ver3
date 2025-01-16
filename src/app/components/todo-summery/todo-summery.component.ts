@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core'
 
 @Component({
   selector: 'app-todo-summery',
@@ -10,8 +10,10 @@ import { Component } from '@angular/core';
 })
 export class TodoSummeryComponent {
   collapsed: boolean = false;
-
-  public toggleCollapse(): void {
+  constructor(private el: ElementRef, private renderer: Renderer2) {};
+    public toggleCollapse(): void {
     this.collapsed = !this.collapsed;
   }
+ 
+
 }
