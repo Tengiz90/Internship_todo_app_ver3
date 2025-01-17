@@ -12,7 +12,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 export class CustomInputComponent {
   @Input() label: string = '';
   @Input() id: string = '';
-  @Input() endButtonType: string = "none";
+  @Input() type: string = "default";
   @Input() hasResponsiveHeight: boolean = false;
 
   @Output() valueChanged = new EventEmitter<string>();
@@ -21,8 +21,7 @@ export class CustomInputComponent {
 
   passwordVisibilityActive: boolean = false;
   
-  togglePasswordVisibility(event: Event){
-    event.preventDefault()
+  togglePasswordVisibility(){
     this.passwordVisibilityActive = ! this.passwordVisibilityActive
   }
 
@@ -30,6 +29,9 @@ export class CustomInputComponent {
     this.valueChanged.emit(this.inputControl.value || '');  
   }
 
+  disableFocuseStealing(event: Event){
+    event.preventDefault();
+  }
   clearValue(){
     this.inputControl.reset();
     this.onInputChange(); 

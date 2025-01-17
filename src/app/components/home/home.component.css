@@ -87,6 +87,7 @@ app-todo-summery {
     width: 90.5%;
     bottom: 0.2em;
     left: 0.51em;
+    pointer-events: none;
 }
 
 app-custom-loading {
