@@ -1,21 +1,19 @@
 <h1>{{firstName}}eeeeeee's To Do List</h1>
 <div class="container">
     <app-custom-input [label]="'🔍 Search'" [id]="'search'" [type]="'inputWithClearButton'"></app-custom-input>
-    <app-custom-button [label]="'Add'"></app-custom-button>
+    <div class="dropdown">
+        <div class="dropdown-head" (mouseover)="toggleDropdown()" (mouseleave)="toggleDropdown()">All 3
+            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z" fill="#0F0F0F"/>
+                </svg>
+        </div>
+        <div *ngIf="isDropdownVisible" class="dropdown-list">
+            <p>All 3</p>
+            <p>Incomplete 3</p>
+            <p>Complete 0</p>
+        </div>
+    </div>
 </div>
 <app-todo-list ></app-todo-list>
-<app-todo-summery></app-todo-summery>
-<button  aria-label="Copy"  id="copy" onclick="this.copyTodos()" tabindex="0">
-    <svg viewBox="0 0 24 24" tabindex="-1" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8C21 6.34315 19.6569 5 18 5H10C8.34315 5 7 6.34315 7 8V20C7 21.6569 8.34315 23 10 23H18C19.6569 23 21 21.6569 21 20V8ZM19 8C19 7.44772 18.5523 7 18 7H10C9.44772 7 9 7.44772 9 8V20C9 20.5523 9.44772 21 10 21H18C18.5523 21 19 20.5523 19 20V8Z" fill="#0F0F0F"/>
-        <path d="M6 3H16C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1H6C4.34315 1 3 2.34315 3 4V18C3 18.5523 3.44772 19 4 19C4.55228 19 5 18.5523 5 18V4C5 3.44772 5.44772 3 6 3Z" fill="#0F0F0F"/>
-    </svg>
-</button>   
-<button [routerLink]="'/login'" aria-label="Sign out"  id="sign-out" tabindex="0">
-    <svg viewBox="0 0 24 24" tabindex="-1" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21,5.78V18.22a1,1,0,0,1-.76,1l-4.1,1a.92.92,0,0,1-.14-.5V4.28a.92.92,0,0,1,.14-.5l4.1,1A1,1,0,0,1,21,5.78Z"></path>
-        <path d="M20.24,19.19l-6,1.5a1,1,0,0,1-1.24-1V4.28a1,1,0,0,1,1.24-1l6,1.5a1,1,0,0,1,.76,1V18.22A1,1,0,0,1,20.24,19.19ZM13,6H10A1,1,0,0,0,9,7V8m0,8v1a1,1,0,0,0,1,1h3"></path>
-        <path d="M6,15,3,12,6,9M3,12H9"></path>
-    </svg>
-</button>
+<app-todo-sidebar></app-todo-sidebar>
 <app-custom-loading *ngIf="isDataLoading" [size]="'medium'"></app-custom-loading>       

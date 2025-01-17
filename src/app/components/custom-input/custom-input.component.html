@@ -1,6 +1,6 @@
 <div class="form_group" [ngClass]="hasResponsiveHeight ? 'ResposniveHeight' : ''">
     <input [formControl]="inputControl"  [type]="type == 'password' ? (passwordVisibilityActive ? 'text': 'password') : 'text'" [id]="id" [ngClass]="{
-        'password': type == 'toggleVisibility', 
+        'password': type == 'password', 
         'inputWithClearButton': type == 'inputWithClearButton'
       }" required>
     <label [for]="id">{{label}}</label>

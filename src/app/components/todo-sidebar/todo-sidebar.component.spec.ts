@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoSummeryComponent } from './todo-summery.component';
+import { TodoSidebarComponent } from './todo-sidebar.component';
 
-describe('TodoSummeryComponent', () => {
-  let component: TodoSummeryComponent;
-  let fixture: ComponentFixture<TodoSummeryComponent>;
+describe('TodoSidebarComponent', () => {
+  let component: TodoSidebarComponent;
+  let fixture: ComponentFixture<TodoSidebarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TodoSummeryComponent]
+      imports: [TodoSidebarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TodoSummeryComponent);
+    fixture = TestBed.createComponent(TodoSidebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

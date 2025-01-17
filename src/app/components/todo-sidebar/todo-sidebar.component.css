@@ -1,0 +1,110 @@
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#sign-out, #copy, #add {
+    background: none;       
+    border: none;
+    margin-bottom: 0em;
+}
+
+#add {
+    margin-bottom: 0.7em;
+}
+#copy {
+    margin-bottom: 0.5em;
+}
+
+
+#sign-out > svg, #copy > svg, #add > svg {
+    outline: none;
+    
+}
+
+#copy > svg {
+    width: 4em;
+    height: 4em;
+}
+
+#sign-out > svg {
+    width: 5em;
+    height: 5em;
+}
+#add > svg {
+    width: 4em;
+    height: 4em;
+}
+
+#sign-out, #copy, #add {
+    transition: transform 0.1s ease;
+}
+#sign-out:hover, #copy:hover, #add:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#add > svg > path:last-child {
+    stroke: var(--primary-color);
+}
+#sign-out > svg > path:first-child {
+    fill: #b7b7b7;
+    stroke-width: 2;
+}
+
+#sign-out > svg > path:nth-child(2) {
+    fill: none;
+    stroke: black; 
+    stroke-linecap: round; 
+    stroke-linejoin: round; 
+    stroke-width: 2;
+}
+
+#sign-out > svg > path:last-child {
+    stroke: var(--primary-color);
+    fill: none;
+    stroke-linecap: round; 
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+@media (max-width: 700px) {
+    #copy > svg {
+        width: 3em;
+        height: 3em;
+    }
+    
+    #sign-out > svg {
+        width: 4em;
+        height: 4em;
+    }
+    #add > svg {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+ @media (max-width: 360px) {
+    #copy > svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
+        
+    #sign-out > svg {
+        width: 3.5em;
+        height: 3.5em;
+        }
+    #add > svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+    
+
+@media (max-height: 440px) {
+    #copy {
+        display: none;
+    }
+}

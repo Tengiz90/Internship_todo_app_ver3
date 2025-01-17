@@ -10,7 +10,9 @@ h1 {
     align-items: center;
     
 }
-
+.dropdown{
+    z-index: 20;
+}
 app-custom-input {
     width: 85%;
 }
@@ -19,75 +21,14 @@ app-custom-button {
     width: 10%;
 }
 
-#sign-out, #copy {
-    position: fixed;
-    right: 1em;
-    bottom: 1em;
-    background: none;       
-    border: none;
-}
-
-#sign-out {
-    right: 1em;
-    bottom: 1em;
-}
-#copy {
-    right: 1em;
-    bottom: 7.5em;
-}
-
-#sign-out > svg, #copy > svg {
-    outline: none;
-}
-
-#copy > svg {
-    width: 4em;
-    height: 4em;
-}
-
-
-#sign-out > svg {
-    width: 5em;
-    height: 5em;
-}
-
-#sign-out, #copy {
-    transition: transform 0.1s ease;
-}
-#sign-out:hover, #copy:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-#sign-out > svg > path:first-child {
-    fill: #b7b7b7;
-    stroke-width: 2;
-}
-
-#sign-out > svg > path:nth-child(2) {
-    fill: none;
-    stroke: black; 
-    stroke-linecap: round; 
-    stroke-linejoin: round; 
-    stroke-width: 2;
-}
-
-#sign-out > svg > path:last-child {
-    stroke: var(--primary-color);
-    fill: none;
-    stroke-linecap: round; 
-    stroke-linejoin: round;
-    stroke-width: 2;
-}
 app-todo-list {
     margin-bottom: 7em;
 } 
-app-todo-summery {
+
+app-todo-sidebar {
     position: fixed;
-    width: 90.5%;
-    bottom: 0.2em;
-    left: 0.51em;
-    pointer-events: none;
+    bottom: 1em;
+    right: 1em;
 }
 
 app-custom-loading {
@@ -97,68 +38,10 @@ app-custom-loading {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 1050px) {
-    app-custom-input {
-        width: 75%;
-    }
-    app-custom-button {
-        width: 20%;
-    } 
-    app-todo-summery {
-        width: 86%;
-    }
-}
-@media (max-width: 880px) {
-    app-todo-summery {
-        width: 82%;
-    }
-}
-@media (max-width: 700px) {
-    #copy > svg {
-        width: 3em;
-        height: 3em;
-    }
-    
-    #sign-out > svg {
-        width: 4em;
-        height: 4em;
-    }
 
-    #sign-out, #copy {
-        right: 0.2em;
-    }
-    app-todo-summery {
-        width: 79.5%;
-    }
-}
-@media (max-width: 420px) {
-app-todo-summery {
-    width: 77%;
-    }
-}
-
-@media (max-width: 360px) {
-    #copy > svg {
-        width: 2.5em;
-        height: 2.5em;
-    }
-    
-    #sign-out > svg {
-        width: 3.5em;
-        height: 3.5em;
-    }
-}
-
-
-@media (max-height: 720px) {
-    #copy {
-        bottom: 6.5em;
-    }
-}
-
-@media (max-height: 300px) {
-    #sign-out, #copy, app-todo-summery {
-        display: none;
+@media (max-height: 220px) {
+    app-todo-sidebar {
+        display: none
     }
 }
 
