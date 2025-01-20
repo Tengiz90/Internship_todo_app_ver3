@@ -21,8 +21,8 @@ export class HomeComponent {
   firstName: string = "";
   isDataLoading: boolean = true;
   constructor(private todoService: TodoService){}
-  toggleDropdown() {
-    this.isDropdownVisible = !this.isDropdownVisible;
+  setDropdownVisibility(visbility: boolean) {
+    this.isDropdownVisible = visbility
 }
   public copyTodos(): void{
 

@@ -4,21 +4,14 @@ h1 {
     text-align: center;
 }
 
-.container {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center;
-    
-}
-.dropdown{
-    z-index: 20;
-}
 app-custom-input {
     width: 85%;
 }
 
-app-custom-button {
+.dropdown {
     width: 10%;
+    align-items: center;
+    position: relative;
 }
 
 app-todo-list {
@@ -38,10 +31,113 @@ app-custom-loading {
     transform: translate(-50%, -50%);
 }
 
+.container {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    
+}
 
-@media (max-height: 220px) {
-    app-todo-sidebar {
-        display: none
+.dropdown-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #c6c6c6;
+    color: white;  
+}
+
+.dropdown-head > svg {
+    margin-top: -0.15em;
+    margin-left: 1em;
+}
+
+.dropdown-head {
+    vertical-align: center;
+}
+.dropdown-head > svg {
+    fill: white
+}
+
+.dropdown-list {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%);
+    opacity: 0; 
+    height: 0px;
+    overflow: hidden; 
+    transition: opacity 0.3s ease, height 0.3s ease; 
+    
+}
+
+.dropdown-list.visible {
+    opacity: 1; 
+    height: 150px;
+}
+
+.dropdown-list > p:first-child {
+    margin-top: 0.5em;
+    border-top-left-radius: 5px;  
+    border-top-right-radius: 5px;  
+
+}
+
+.dropdown-list > p {
+    margin: 0em;
+    padding: 0.5em;
+    border: 1px solid #c6c6c6;
+    cursor: pointer;
+    background: white;
+    white-space: nowrap;
+}
+
+.dropdown-list > p:last-child {
+    border-bottom-left-radius: 5px;  
+    border-bottom-right-radius: 5px; 
+}
+
+@media (max-width: 1050px){
+    .dropdown-head > svg {
+        margin-left: 0.5em;
+    }
+    app-custom-input {
+        width: 80%;
+    }
+    .dropdown {
+        width: 15%;
+    }
+}
+
+
+@media (max-width: 700px){
+
+    app-custom-input {
+        width: 75%;
+    }
+    .dropdown {
+        width: 20%;
+    }
+}
+
+@media (max-width: 700px){
+
+    app-custom-input {
+        width: 70%;
+    }
+    .dropdown {
+        width: 25%;
+    }
+}
+
+@media (max-width: 400px){
+
+    app-custom-input {
+        width: 65%;
+    }
+    .dropdown {
+        width: 30%;
     }
 }
 
