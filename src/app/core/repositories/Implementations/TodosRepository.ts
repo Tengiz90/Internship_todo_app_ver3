@@ -2,7 +2,7 @@ import { map, Observable } from 'rxjs';
 import { ITodosRepository } from "../Interfaces/ITodosRepository";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
-import { Todo } from '../../models/Todo.model';
+import { Todo } from '../../models/todo.model';
 
 @Injectable({
     providedIn: 'root',

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CustomInputComponent } from '../custom-input/custom-input.component';
-import { CustomButtonComponent } from '../custom-button/custom-button.component';
 import { RouterModule } from '@angular/router';
 import { TodoListComponent } from "../todo-list/todo-list.component";
 import { TodoService } from '../../core/services/todo.service';
@@ -17,14 +16,16 @@ import { TodoSidebarComponent } from '../todo-sidebar/todo-sidebar.component';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  isDropdownVisible: boolean = false;
+  dropdownVisible: boolean = false;
   firstName: string = "";
-  isDataLoading: boolean = true;
+  dataLoading: boolean = true;
+  
   constructor(private todoService: TodoService){}
   setDropdownVisibility(visbility: boolean) {
-    this.isDropdownVisible = visbility
+    this.dropdownVisible = visbility
 }
   public copyTodos(): void{
 
   }
+
 }

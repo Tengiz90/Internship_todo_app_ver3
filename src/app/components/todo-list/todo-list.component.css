@@ -1,19 +1,32 @@
 table {
-    width: 92%;
+    width: 100%;
     border-spacing: 1em 0.5em; 
 } 
 
 
-td.title {
-    width: 100%;
+
+td.card {
+    width: 90%;
     border: 1px solid #ddd; 
     border-radius: 8px;
-    padding: 10px; 
+    padding: 8px; 
     background-color: white; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: box-shadow 0.3s ease-in-out;
 }
 
+.title {
+    font-size: 2em;
+    
+}
+.completed {
+    text-decoration:line-through;
+}
+.title~div {
+    font-size: small;
+    color: gray;
+    margin-top: 0.5em;
+}
 .delete-button {
     cursor: pointer;
     width: 2.2em;
@@ -29,34 +42,4 @@ td.title {
 
 .delete-button:hover path {
     stroke: red;
-}
-
-@media (max-width: 1050px) {
-    table {
-        width: 87%;
-        border-spacing: 0.5em 0.5em; /
-    } 
-}
-
-@media (max-width: 880px) {
-    table {
-        width: 84%;
-        border-spacing: 0.5em 0.5em; /
-    } 
-}
-
-@media (max-width: 700px) {
-    table {
-        width: 83%;
-        border-spacing: 0.5em 0.5em; /
-    } 
-}
-
-@media (max-height: 300px) {
-    table {
-        width: 100%;
-    }
-    .table-container {
-        margin-bottom: 0em;
-    }
 }

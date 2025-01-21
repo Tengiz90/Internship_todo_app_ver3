@@ -15,13 +15,15 @@ app-custom-input {
 }
 
 app-todo-list {
-    margin-bottom: 7em;
-} 
+    display: block;
+    margin-bottom: 8em;
+}
 
 app-todo-sidebar {
     position: fixed;
-    bottom: 1em;
     right: 1em;
+    bottom: 1em;
+    pointer-events: none;
 }
 
 app-custom-loading {
@@ -44,6 +46,7 @@ app-custom-loading {
     justify-content: center;
     background-color: var(--primary-color);
     padding: 1em;
+    
     border-radius: 5px;
     border: 1px solid #c6c6c6;
     color: white;  
@@ -56,6 +59,7 @@ app-custom-loading {
 
 .dropdown-head {
     vertical-align: center;
+    text-align: center;
 }
 .dropdown-head > svg {
     fill: white
@@ -69,12 +73,11 @@ app-custom-loading {
     height: 0px;
     overflow: hidden; 
     transition: opacity 0.3s ease, height 0.3s ease; 
-    
 }
 
 .dropdown-list.visible {
     opacity: 1; 
-    height: 150px;
+    height: 7.2em;
 }
 
 .dropdown-list > p:first-child {

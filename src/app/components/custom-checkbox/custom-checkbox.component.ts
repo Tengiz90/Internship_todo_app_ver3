@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CustomCheckboxComponent {
   @Input() size: string = 'small';
-  checked: boolean = false;
+  @Input() checked: boolean = false;
 
   toggleCheckMark(){
     this.checked = !this.checked

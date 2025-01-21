@@ -1,110 +1,63 @@
-
 .sidebar {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
 }
 
-#sign-out, #copy, #add {
-    background: none;       
+.circular-button, #more-button {
     border: none;
-    margin-bottom: 0em;
-}
-
-#add {
-    margin-bottom: 0.7em;
-}
-#copy {
-    margin-bottom: 0.5em;
-}
-
-
-#sign-out > svg, #copy > svg, #add > svg {
-    outline: none;
-    
-}
-
-#copy > svg {
-    width: 4em;
-    height: 4em;
-}
-
-#sign-out > svg {
-    width: 5em;
-    height: 5em;
-}
-#add > svg {
-    width: 4em;
-    height: 4em;
-}
-
-#sign-out, #copy, #add {
-    transition: transform 0.1s ease;
-}
-#sign-out:hover, #copy:hover, #add:hover {
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transform: scale(1.2);
+    padding: 0;
+    transition: background-color 0.3s ease;
 }
 
-#add > svg > path:last-child {
-    stroke: var(--primary-color);
-}
-#sign-out > svg > path:first-child {
-    fill: #b7b7b7;
-    stroke-width: 2;
-}
-
-#sign-out > svg > path:nth-child(2) {
-    fill: none;
-    stroke: black; 
-    stroke-linecap: round; 
-    stroke-linejoin: round; 
-    stroke-width: 2;
+.circular-button {
+    background-color: var(--primary-color);   
+    width: 5em; 
+    height: 5em; 
+    margin-top: 0.5em;
+    pointer-events: all;
 }
 
-#sign-out > svg > path:last-child {
-    stroke: var(--primary-color);
-    fill: none;
-    stroke-linecap: round; 
-    stroke-linejoin: round;
-    stroke-width: 2;
+.icon {
+    width: 2.5em;
+    height: 2.5em; 
+}
+#more-button > .icon {
+    fill: white;   
 }
 
-@media (max-width: 700px) {
-    #copy > svg {
-        width: 3em;
-        height: 3em;
-    }
-    
-    #sign-out > svg {
-        width: 4em;
-        height: 4em;
-    }
-    #add > svg {
-        width: 3em;
-        height: 3em;
-    }
+#sign-out polyline, #sign-out line, #sign-out path {
+    stroke: white;
 }
 
- @media (max-width: 360px) {
-    #copy > svg {
-        width: 2.5em;
-        height: 2.5em;
-    }
-        
-    #sign-out > svg {
-        width: 3.5em;
-        height: 3.5em;
-        }
-    #add > svg {
-        width: 2.5em;
-        height: 2.5em;
-    }
+#add line {
+    stroke: white;
 }
-    
 
-@media (max-height: 440px) {
-    #copy {
-        display: none;
-    }
+#copy path {
+    fill: white;
+}
+#more-button {
+    width: 3em;
+    height: 3em;
+    background: rgb(88, 50, 177);
+    pointer-events: all;
+}
+
+#more-button:active {
+    background: rgb(129, 90, 220);
+}
+.circular-button:active {
+    background-color: #54a4fa;
+}
+
+.pointer-events-disabled {
+    pointer-events: none;
 }

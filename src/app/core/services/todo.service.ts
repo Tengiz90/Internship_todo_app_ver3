@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Todo } from '../models/Todo.model';
+import { Todo } from '../models/todo.model';
 import { TODOS_REPOSITORY_TOKEN } from '../tokens/todos-repository.token';
 import { ITodosRepository } from '../repositories/Interfaces/ITodosRepository';
 
@@ -18,7 +18,7 @@ export class TodoService {
   public getTodosFromServer(userId: number): Observable<Todo[]>{
     return this.todosRepository.getTodosForUser(userId).pipe(
       map((data: Todo[]) => {
-        return data.map(todo => new Todo(todo.id, todo.name, todo.completed))
+        return data.map(todo => new Todo(todo.id, todo.name, todo.completed, todo.createdAt))
       }
     )
   )
@@ -35,7 +35,7 @@ export class TodoService {
   }
 
   public saveTodoLocally(id: number, name: string){
-    this.todos.push(new Todo(id, name, false))
+    this.todos.push(new Todo(id, name, false, new Date()))
     this.updateCounts()
   }
   
