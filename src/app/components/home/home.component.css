@@ -144,3 +144,14 @@ app-custom-loading {
     }
 }
 
+@media (max-height: 500px){
+    app-todo-list {
+        margin-bottom: 5em;
+    }
+}
+
+@media (max-height: 350px){
+    .dropdown-list > p {
+        padding: 0.2em;
+    }
+}

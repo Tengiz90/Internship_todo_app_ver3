@@ -61,3 +61,19 @@
 .pointer-events-disabled {
     pointer-events: none;
 }
+
+@media (max-height: 500px){
+    .sidebar {
+        flex-direction: row;
+    }
+    .circular-button {
+        margin-left: 0.5em;
+        margin-top: 0em;
+    }
+
+    @media (max-height: 320px){
+        .sidebar {
+            display: none;
+        }
+    }    
+}

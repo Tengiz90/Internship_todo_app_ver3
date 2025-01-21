@@ -30,7 +30,7 @@ export class TodoSidebarComponent {
     const copyButton = this.el.nativeElement.querySelector('#copy');
     const addButton = this.el.nativeElement.querySelector('#add');
     const moreButton = this.el.nativeElement.querySelector('#more-button');
-    const clickedInside = this.el.nativeElement.contains(event.target as Node) || copyButton?.contains(event.target as Node) || addButton?.contains(event.target as Node) || moreButton?.contains(event.target as Node)
+    const clickedInside = signOutButton?.contains(event.target as Node) || copyButton?.contains(event.target as Node) || addButton?.contains(event.target as Node) || moreButton?.contains(event.target as Node)
     if (!clickedInside) {
       this.disablePointerEventsOnSidebarButtons();
     }
