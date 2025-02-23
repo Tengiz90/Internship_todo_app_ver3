@@ -15,6 +15,7 @@
     cursor: pointer;
     padding: 0;
     transition: background-color 0.3s ease;
+    pointer-events: all;
 }
 
 .circular-button {
@@ -22,7 +23,6 @@
     width: 5em; 
     height: 5em; 
     margin-top: 0.5em;
-    pointer-events: all;
 }
 
 .icon {
@@ -48,7 +48,6 @@
     width: 3em;
     height: 3em;
     background: rgb(88, 50, 177);
-    pointer-events: all;
 }
 
 #more-button:active {
@@ -58,7 +57,7 @@
     background-color: #54a4fa;
 }
 
-.pointer-events-disabled {
+#more-button.pointer-events-disabled, .circular-button.pointer-events-disabled {
     pointer-events: none;
 }
 
